@@ -17,7 +17,6 @@ const Clock = () => {
   const anHour = hour * 30
   const anMinute = minute * 6
   const anSecond = second * 6
-  const rotate = `rotate(${anHour + anMinute + anSecond}deg)`
 
   return (
     <div className="clock-container">
@@ -25,15 +24,15 @@ const Clock = () => {
         <div className="center" />
         <div
           className="hand hour"
-          style={{ transform: `rotate(${hour}deg)` }}
+          style={{ transform: `rotate(${anHour}deg)`, top: '10%' }}
         />
         <div
           className="hand minute"
-          style={{ transform: `rotate(${minute}deg)` }}
+          style={{ transform: `rotate(${anMinute}deg)` }}
         />
         <div
           className="hand second"
-          style={{ transform: `rotate(${second}deg)` }}
+          style={{ transform: `rotate(${anSecond}deg)` }}
         />
         {[...Array(12)].map((_, i) => (
           <div

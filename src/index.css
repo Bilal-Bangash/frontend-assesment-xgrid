@@ -7,16 +7,16 @@
 
 .clock {
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 410px;
+  height: 410px;
   border: 2px solid gray;
   border-radius: 50%;
 }
 
 .center {
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
   background-color: black;
   border: 2px solid black;
   border-radius: 50%;
@@ -35,17 +35,18 @@
 }
 
 .hour {
-  width: 8px;
-  height: 30%;
+  width: 10px;
+  height: 40%;
 }
 
 .minute {
-  height: 50%;
+  height: 45%;
   width: 5px;
+  top: 5%;
 }
 
 .second {
-  height: 60%;
+  height: 50%;
   width: 2px;
 }
 
@@ -54,8 +55,8 @@
   width: 4px;
   height: 20px;
   background: black;
-  top: 50%;
-  left: 50%;
+  top: 48%;
+  left: 48%;
   transform-origin: bottom;
 }
 
@@ -64,8 +65,8 @@
   width: 2px;
   height: 10px;
   background: black;
-  top: 50%;
-  left: 50%;
+  top: 48%;
+  left: 48%;
   transform-origin: bottom;
 }
 
