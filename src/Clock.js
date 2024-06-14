@@ -9,7 +9,7 @@ const Clock = () => {
 
     // clean up
     return () => clearInterval(intervalId)
-  })
+  }, [])
 
   const hour = time.getHours()
   const minute = time.getMinutes()
@@ -35,19 +35,22 @@ const Clock = () => {
           className="hand second"
           style={{ transform: `rotate(${second}deg)` }}
         />
-        {/* add hours marker/lines */}
         {[...Array(12)].map((_, i) => (
           <div
             key={i}
             className="hour-marker"
-            style={{ transform: `rotate(${i * 30}deg) translate(0, -50%)` }}
+            style={{
+              transform: `rotate(${i * 30}deg) translate(0, -180px)`,
+            }}
           />
         ))}
         {[...Array(60)].map((_, i) => (
           <div
             key={i}
-            className={`minute-marker ${i % 5 === 0 ? 'hour' : ''}`.trim()}
-            style={{ transform: `rotate(${i * 6}deg) translate(0, -50%)` }}
+            className={`minute-marker ${i % 5 === 0 ? 'hour' : ''}`}
+            style={{
+              transform: `rotate(${i * 6}deg) translate(0, -190px)`,
+            }}
           />
         ))}
       </div>
